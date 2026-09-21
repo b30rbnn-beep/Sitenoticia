@@ -1,1 +1,25 @@
 @import url("https://cdn.jsdelivr.net/gh/b30rbnn-beep/Sitenoticia@21835a2b7e1b52808f7b35c9cdf9cb1d16e4cb71/style.css");
+
+.hero-cartao {
+  padding: 40px 56px 130px;
+}
+
+.hero-video {
+  position: relative;
+  width: 86.4%;
+  margin-left: auto;
+  aspect-ratio: 20 / 9;
+  background: #000;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.hero-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: none;
+}
