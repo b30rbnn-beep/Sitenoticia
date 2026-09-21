@@ -1,5 +1,6 @@
 @import url("https://raw.githubusercontent.com/b30rbnn-beep/Sitenoticia/21835a2b7e1b52808f7b35c9cdf9cb1d16e4cb71/style.css");
 
+/* Ajustes locais: layout responsivo para computadores, tablets e celulares. */
 .hero-cartao {
   padding: 40px 56px 130px;
 }
@@ -16,10 +17,174 @@
 
 .hero-video iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: none;
   transform: none;
+}
+
+/* Evita que menus, tabelas e cartões estourem a tela em outros dispositivos. */
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .topo-conteudo,
+  .topo-direita {
+    align-items: center;
+  }
+
+  .topo-conteudo {
+    justify-content: center;
+  }
+
+  .topo-direita {
+    width: 100%;
+  }
+
+  .topo-links,
+  .topo-busca {
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  .topo-busca input {
+    min-width: 0;
+  }
+
+  .menu-secundario-conteudo {
+    justify-content: center;
+  }
+
+  .menu-secundario a {
+    padding: 16px 10px;
+  }
+
+  .hero-cartao {
+    padding: 32px 28px 96px;
+  }
+
+  .hero-cartao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-video {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-cartao-texto {
+    margin-top: 0;
+  }
+
+  .noticias-grid,
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estatisticas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .aviso-topo-linha {
+    padding: 7px 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .painel-aviso-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 22px 18px 12px;
+  }
+
+  .painel-aviso-icone,
+  .painel-aviso-conteudo {
+    margin-top: 0;
+  }
+
+  .topo-selo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .topo-marca-titulo {
+    font-size: 1.8rem;
+  }
+
+  .menu-secundario-conteudo {
+    gap: 0;
+  }
+
+  .menu-secundario a {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+  }
+
+  .menu-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
+    white-space: normal;
+  }
+
+  .hero {
+    padding-top: 24px;
+  }
+
+  .hero-cartao {
+    padding: 24px 18px 76px;
+  }
+
+  .hero-titulo-placeholder {
+    height: auto;
+    min-height: 0;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+
+  .hero-paginas {
+    transform: none;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+
+  .pagina {
+    width: 34px;
+    height: 34px;
+  }
+
+  .noticias-grid,
+  .equipe-grid,
+  .estatisticas-grid,
+  .central-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estatistica-numero {
+    font-size: 3rem;
+  }
+
+  .trabalho-grid-duplo {
+    grid-template-columns: 1fr;
+  }
 }
