@@ -1,13 +1,16 @@
 @import url("https://raw.githubusercontent.com/b30rbnn-beep/Sitenoticia/21835a2b7e1b52808f7b35c9cdf9cb1d16e4cb71/style.css");
 
-/* Ajuste solicitado: somente a caixa do vídeo fica 20% mais alta.
-   O cartão azul ao redor permanece com a altura original. */
-.hero-cartao {
-  padding-bottom: 109px;
-}
-
+/* Caixa do vídeo: mantém largura e posição; aumenta somente a altura inferior em 20%. */
 .hero-video {
   aspect-ratio: 20 / 10.8;
+}
+
+/* Mostra o vídeo inteiro dentro da caixa, sem cortar a parte inferior. */
+.hero-video iframe {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
 }
 
 @media (max-width: 720px) {
