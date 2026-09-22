@@ -1,1 +1,113 @@
 @import url("https://raw.githubusercontent.com/b30rbnn-beep/Sitenoticia/ef6ca449e18f252faa72b24e1932d9e0a0ee3c1b/style.css");
+
+.topo-selo-texto,
+.selo-generico,
+.central-icone-texto,
+.trabalho-cartao-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topo-selo-texto,
+.selo-generico {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f6d58d, #c79a3b 60%, #8b6822 100%);
+  color: #0b2545;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+.topo-selo-texto {
+  flex-shrink: 0;
+}
+
+.hero-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 245, 252, 0.96));
+  border-radius: 18px;
+  padding: 2rem;
+  min-height: 100%;
+}
+
+.hero-resumo-etiqueta {
+  margin: 0;
+  color: #8b6822;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-resumo h2 {
+  margin: 0;
+  color: #0b2545;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+}
+
+.hero-resumo-lista {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #19324d;
+  line-height: 1.7;
+}
+
+.hero-resumo-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.botao-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.central-icone-texto {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #16385f, #0b2545);
+  color: #fff;
+}
+
+.trabalho-cartao-badge {
+  min-height: 210px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #16385f, #0b2545 58%, #345f8f);
+  color: #fff;
+  font-size: 1.35rem;
+  padding: 1.5rem;
+}
+
+.rodape-social-texto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.rodape-social-texto a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .topo-selo-texto,
+  .selo-generico {
+    width: 62px;
+    height: 62px;
+  }
+
+  .hero-resumo {
+    padding: 1.5rem;
+  }
+}
