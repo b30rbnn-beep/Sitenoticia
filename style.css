@@ -1037,6 +1037,11 @@ textarea {
   min-height: 100%;
 }
 
+.hero-seta {
+  border: 0;
+  cursor: pointer;
+}
+
 .hero-resumo-etiqueta {
   margin: 0;
   color: #8b6822;
