@@ -151,7 +151,10 @@ function mostrarConjuntoWanted(indice) {
     const foco = document.getElementById("wanted-for-" + i);
     const loc = document.getElementById("wanted-loc-" + i);
 
-    if (foto) foto.src = pessoa.foto || semFoto;
+    if (foto) {
+      foto.src = pessoa.foto || semFoto;
+      foto.alt = pessoa.nome ? "Ilustração do dossiê " + pessoa.nome : "";
+    }
     if (nome) nome.textContent = pessoa.nome;
     if (office) office.textContent = pessoa.office;
     if (foco) foco.textContent = pessoa.foco;
