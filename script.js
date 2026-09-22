@@ -1,10 +1,10 @@
 const slidesDoVideo = [
-  { video: "", titulo: "Rede de abrigos amplia atendimento e pressiona orçamento em capitais do país", data: "22 de setembro de 2026" },
-  { video: "", titulo: "Painel acompanha promessas, contratos e entregas das obras mais caras do semestre", data: "21 de setembro de 2026" },
-  { video: "", titulo: "Mapa da mobilidade identifica trajetos onde o tempo de deslocamento mais cresceu", data: "19 de setembro de 2026" },
-  { video: "", titulo: "Consórcios regionais aceleram compras coletivas de medicamentos e manutenção urbana", data: "18 de setembro de 2026" },
-  { video: "", titulo: "Portais de transparência avançam, mas ainda falham em explicar contratos emergenciais", data: "16 de setembro de 2026" },
-  { video: "", titulo: "Calendário de audiências públicas mostra decisões que afetam transporte e moradia", data: "15 de setembro de 2026" }
+  { titulo: "Rede de abrigos amplia atendimento e pressiona orçamento em capitais do país", data: "22 de setembro de 2026" },
+  { titulo: "Painel acompanha promessas, contratos e entregas das obras mais caras do semestre", data: "21 de setembro de 2026" },
+  { titulo: "Mapa da mobilidade identifica trajetos onde o tempo de deslocamento mais cresceu", data: "19 de setembro de 2026" },
+  { titulo: "Consórcios regionais aceleram compras coletivas de medicamentos e manutenção urbana", data: "18 de setembro de 2026" },
+  { titulo: "Portais de transparência avançam, mas ainda falham em explicar contratos emergenciais", data: "16 de setembro de 2026" },
+  { titulo: "Calendário de audiências públicas mostra decisões que afetam transporte e moradia", data: "15 de setembro de 2026" }
 ];
 
 let slideAtual = 0;
@@ -16,11 +16,6 @@ if (document.getElementById("seta-esquerda")) {
   function mostrarSlide(indice) {
     slideAtual = indice;
     const slide = slidesDoVideo[slideAtual];
-
-    const videoHero = document.getElementById("video-hero");
-    if (videoHero) {
-      videoHero.src = "https://www.youtube.com/embed/" + slide.video + "?rel=0";
-    }
 
     const heroTitulo = document.getElementById("hero-titulo");
     if (heroTitulo) {
@@ -122,24 +117,24 @@ const semFoto = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
 
 const conjuntosWanted = [
   [
-    { foto: "", nome: "Moradia emergencial", office: "Cidades e Serviços", wanted: "Orçamento, contratos e capacidade de acolhimento", loc: "Capitais do Sudeste e Nordeste" },
-    { foto: "", nome: "Transporte em revisão", office: "Mobilidade", wanted: "Corredores de ônibus, tarifa e integração metropolitana", loc: "Regiões metropolitanas" },
-    { foto: "", nome: "Creches em expansão", office: "Educação", wanted: "Fila de matrícula, obras e atendimento parcial", loc: "Interior e periferias urbanas" }
+    { foto: "", nome: "Moradia emergencial", office: "Cidades e Serviços", foco: "Orçamento, contratos e capacidade de acolhimento", loc: "Capitais do Sudeste e Nordeste" },
+    { foto: "", nome: "Transporte em revisão", office: "Mobilidade", foco: "Corredores de ônibus, tarifa e integração metropolitana", loc: "Regiões metropolitanas" },
+    { foto: "", nome: "Creches em expansão", office: "Educação", foco: "Fila de matrícula, obras e atendimento parcial", loc: "Interior e periferias urbanas" }
   ],
   [
-    { foto: "", nome: "Contratos sob lupa", office: "Transparência", wanted: "Aditivos, prazos e termos de referência", loc: "Estados e consórcios regionais" },
-    { foto: "", nome: "Chuvas e resposta rápida", office: "Clima", wanted: "Planos de contingência, sirenes e obras de drenagem", loc: "Litoral e áreas de encosta" },
-    { foto: "", nome: "Saúde de bairro", office: "Saúde Pública", wanted: "Reforma de unidades, equipes e filas reguladas", loc: "Capitais e cidades médias" }
+    { foto: "", nome: "Contratos sob lupa", office: "Transparência", foco: "Aditivos, prazos e termos de referência", loc: "Estados e consórcios regionais" },
+    { foto: "", nome: "Chuvas e resposta rápida", office: "Clima", foco: "Planos de contingência, sirenes e obras de drenagem", loc: "Litoral e áreas de encosta" },
+    { foto: "", nome: "Saúde de bairro", office: "Saúde Pública", foco: "Reforma de unidades, equipes e filas reguladas", loc: "Capitais e cidades médias" }
   ],
   [
-    { foto: "", nome: "Economia do cuidado", office: "Trabalho e Renda", wanted: "Remuneração, jornadas e oferta de serviços", loc: "Grandes centros urbanos" },
-    { foto: "", nome: "Habitação em disputa", office: "Planejamento", wanted: "Regularização, aluguel social e uso do solo", loc: "Centro expandido e periferias" },
-    { foto: "", nome: "Escolas em obras", office: "Infraestrutura", wanted: "Licitações, cronogramas e fiscalização local", loc: "Norte e Centro-Oeste" }
+    { foto: "", nome: "Economia do cuidado", office: "Trabalho e Renda", foco: "Remuneração, jornadas e oferta de serviços", loc: "Grandes centros urbanos" },
+    { foto: "", nome: "Habitação em disputa", office: "Planejamento", foco: "Regularização, aluguel social e uso do solo", loc: "Centro expandido e periferias" },
+    { foto: "", nome: "Escolas em obras", office: "Infraestrutura", foco: "Licitações, cronogramas e fiscalização local", loc: "Norte e Centro-Oeste" }
   ],
   [
-    { foto: "", nome: "Água e saneamento", office: "Serviços Essenciais", wanted: "Metas de expansão, perdas e investimentos", loc: "Semiárido e regiões costeiras" },
-    { foto: "", nome: "Segurança alimentar", office: "Desenvolvimento Social", wanted: "Distribuição, compras públicas e cobertura local", loc: "Redes comunitárias e zonas rurais" },
-    { foto: "", nome: "Dados do orçamento", office: "Contas Públicas", wanted: "Execução financeira, suplementações e restos a pagar", loc: "União, estados e capitais" }
+    { foto: "", nome: "Água e saneamento", office: "Serviços Essenciais", foco: "Metas de expansão, perdas e investimentos", loc: "Semiárido e regiões costeiras" },
+    { foto: "", nome: "Segurança alimentar", office: "Desenvolvimento Social", foco: "Distribuição, compras públicas e cobertura local", loc: "Redes comunitárias e zonas rurais" },
+    { foto: "", nome: "Dados do orçamento", office: "Contas Públicas", foco: "Execução financeira, suplementações e restos a pagar", loc: "União, estados e capitais" }
   ]
 ];
 
@@ -153,13 +148,13 @@ function mostrarConjuntoWanted(indice) {
     const foto = document.getElementById("wanted-foto-" + i);
     const nome = document.getElementById("wanted-nome-" + i);
     const office = document.getElementById("wanted-office-" + i);
-    const wanted = document.getElementById("wanted-for-" + i);
+    const foco = document.getElementById("wanted-for-" + i);
     const loc = document.getElementById("wanted-loc-" + i);
 
     if (foto) foto.src = pessoa.foto || semFoto;
     if (nome) nome.textContent = pessoa.nome;
     if (office) office.textContent = pessoa.office;
-    if (wanted) wanted.textContent = pessoa.wanted;
+    if (foco) foco.textContent = pessoa.foco;
     if (loc) loc.textContent = pessoa.loc;
   });
 
