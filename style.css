@@ -1038,8 +1038,13 @@ textarea {
 }
 
 .hero-seta {
+  appearance: none;
+  background: transparent;
   border: 0;
+  color: inherit;
   cursor: pointer;
+  font: inherit;
+  padding: 0;
 }
 
 .hero-seta span {
